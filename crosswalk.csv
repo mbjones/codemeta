@@ -15,7 +15,7 @@ schema:SoftwareApplication,permissions,Text,,,,,,,,,,,,identificationInfo.resour
 schema:SoftwareApplication,processorRequirements,Text,,,,,,,,,,,,identificationInfo.environmentDescription*,,,,cpu,,,,,,,,,,,,,,,,,processorRequirements
 schema:SoftwareApplication,releaseNotes,Text  or URL,,,,,,,,,,,,identificationInfo.additionalDocumentation*,,,,,releaseNotes,,,,,,,,,,,,,,,,releaseNotes
 schema:SoftwareApplication,softwareHelp,CreativeWork,,,,,,,,,,,,identificationInfo.additionalDocumentation*,,,,,,,,,,,,,,,,,,,,,softwareHelp
-schema:SoftwareApplication,softwareRequirements,SoftwareSourceCode,,,"dependencies, dev-dependencies, build-dependencies",references,,,,,,,,identificationInfo.additionalDocumentation*,prerequisites,,,dependencies / bundledDependencies / bundleDependencies / peerDependencies,,"Depends, SystemRequirements",hasDependency->Software,prereqs,,install_requires,Requires,"Depends, SystemRequirements","requirements, add_runtime_dependency","""Platform, environment, and dependencies""",,Database Environment,P1547,,,depends,softwareRequirements
+schema:SoftwareApplication,softwareRequirements,SoftwareSourceCode,,,"dependencies, dev-dependencies, build-dependencies",references,,,,,,,,identificationInfo.additionalDocumentation*,prerequisites,,,dependencies / bundledDependencies / bundleDependencies / peerDependencies / devDependencies / optionalDependencies,,"Depends, SystemRequirements, BuildDepends",hasDependency->Software,prereqs,,install_requires,Requires,"Depends, SystemRequirements, Suggests","requirements, add_runtime_dependency, add_development_dependency","""Platform, environment, and dependencies""",,Database Environment,P1547,,,depends,softwareRequirements
 schema:SoftwareApplication,softwareVersion,Text,,,,version,,release,,,,,,identificationInfo.citation.edition,,version,,,,,,,version,,,Version,,,,,P348,,version,,softwareVersion
 schema:SoftwareApplication,storageRequirements,Text  or URL,,,,,,,,,,,,identificationInfo.environmentDescription*,,,,,,,,,,,,,,,,,,,,,storageRequirements
 schema:SoftwareApplication,supportingData,DataFeed,,,,,,,,,,,,identificationInfo.associatedResource.name*,,,,,,,,,,,,,,,,,,,,,supportingData
@@ -60,7 +60,6 @@ schema:Review,reviewBody,The actual body of the review,,,,,,,,,,,,,,,,,,,,,,,,,,
 schema:Role,endDate,Date or Datetime,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,endDate
 schema:Role,roleName,Text,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,roleName
 schema:Role,startDate,Date or Datetime,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,startDate
-codemeta:SoftwareSourceCode,softwareSuggestions,SoftwareSourceCode,,,,(references),,,,,,,,identificationInfo.additionalDocumentation*,,,,devDependencies / optionalDependencies,,BuildDepends,,,,,,Suggests,add_development_dependency,,,,,,,suggests,softwareSuggestions
 codemeta:SoftwareSourceCode,maintainer,Person,,maintainer,package.authors,,prov:qualifiedAttribution,maintainer,,,,,,identificationInfo.pointOfContact,,,,,,,,,,maintainer / maintainer_email,,Maintainer,,,,,,,,uploadedBy,maintainer
 codemeta:SoftwareSourceCode,continuousIntegration,URL,,,,,,,,,,,,identificationInfo.additionalDocumentation*,ciManagement,,,,,,,,,,,,,,,,,,,continuousIntegration,contIntegration
 codemeta:SoftwareSourceCode,buildInstructions,URL,,,,,,,,,,,,identificationInfo.additionalDocumentation*,,,,,,,,,,,,,,,,,,,,buildInstructions,buildInstructions
